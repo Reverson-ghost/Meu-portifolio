@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family= Anton & family = Roboto:wght@100 & display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    background: linear-gradient(67deg, rgba(0, 60, 255, 0.627), white);
+    overflow-x: hidden;
+}
+
+#cabecalho {
+    height: 100px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    background: linear-gradient(rgba(37, 37, 37, 0.5),
+            rgba(0, 60, 255, 0.627));
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: 10px 5%;
+    animation: logo-1 infinite 20s linear;
+}
+
+.nav-items {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0px 5%;
+    padding: 20px;
+}
+
+.lista-de-itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin: 50px 0px;
+}
+
+.links-head {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ACIMA O DESIGNER DO  CABEÇALHO*/
+/*Designer sessao*/
+.conteudo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    animation: fundo infinite 10s linear;
+
+}
+
+.imagem-fundo {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 800px;
+}
+
+/*CLASSES PARA A ANIMAÇAO DOS TEXTOS*/
+.animacao-texto-portifolio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: span-port infinite 60s linear;
+}
+
+.texto-portifolio {
+    animation: titulo-movimentacao infinite 60s linear;
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    left: 5%;
+    height: 100vh;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px
+}
+
+.span-port {
+    animation-name: span-port;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.span-port:nth-of-type(2) {
+    animation-delay: 0.25s;
+}
+
+.span-port:nth-of-type(3) {
+    animation-delay: 2s;
+}
+
+.span-port:nth-of-type(2) {
+    animation-delay: 10s;
+}
+
+.span-port:nth-of-type(4) {
+    animation-delay: 8s;
+}
+
+.span-port:nth-of-type(6) {
+    animation-delay: 6s;
+}
+
+.span-port:nth-of-type(7) {
+    animation-delay: 6s;
+}
+
+.span-port:nth-of-type(5) {
+    animation-delay: 6s;
+}
+
+/* ANIMAÇAO PARA O BRILHO*/
+@keyframes span-port {
+    0% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.627),
+            0 0 50px rgba(0, 60, 255, 0.627),
+            0px 0px 50px rgb(134, 134, 235),
+        ;
+    }
+
+    10%,
+    90% {
+        color: rgba(0, 123, 255, 0.627);
+        color: rgb(255, 255, 255);
+
+    }
+
+    20% {
+        color: rgba(0, 123, 255, 0.627);
+        color: rgba(255, 255, 255, 0.627);
+    }
+
+    100% {
+        color: rgba(0, 123, 255, 0.627);
+        color: rgb(255, 255, 255);
+
+    }
+
+}
+
+/*ANIMAÇAO PARA O FUNDO*/
+@keyframes fundo {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*ANIMAÇAO PARA O LOGO*/
+@keyframes logo-1 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(225px);
+        opacity: 0;
+    }
+}
+
+/*Hover dos links do menu*/
+.links-head:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* CLASSES PARA ANIMAÇAO DO FUNDO*/
+.fundo {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    bottom: 0;
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+}
+
+.it-fundo {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, rgba(0, 60, 255, 0.627), white);
+    border-radius: 50%;
+    margin: 10px;
+    animation: bolhas infinite calc(180s/var(--i)) linear;
+}
+
+.it-fundo:nth-of-type(even) {
+    background-color: rgb(9, 9, 9);
+}
+
+/*ANIMAÇAO PARA O FUNDO*/
+@keyframes bolhas {
+    0% {
+        transform: translateY(10vh) scale(0);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translateY(-85vh) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-85vh) scale(0);
+        opacity: 0;
+    }
+
+}
+
+/*CLASSES PARA AS INFORMAÇÕES SOBRE QUEM SOU*/
+.subtitulo-portifolio {
+    position: relative;
+    bottom: 100px;
+    font-size: 20px;
+    right: 100px;
+    animation: sub-titulo-movimentacao infinite 60s linear;
+}
+
+.sub-titulo {
+    font-size: 30px;
+}
+
+/*ANIMAÇAO DE MOVIMENTAÇÃO PARA O SUBTITULO E O TITULO*/
+@keyframes sub-titulo-movimentacao {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes titulo-movimentacao {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateX(259px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/*CLASSES PARA AS INFORMAÇOES SOBRE*/
+.sobre {
+    width: 100%;
+    position: relative;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-info {
+    position: relative;
+    left: 1%;
+    bottom: 100px;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px 0px rgb(92, 182, 196);
+    animation: sobre-info infinite 40s linear;
+}
+
+.paragrafo-sobre {
+    color: white;
+    position: relative;
+    left: 1%;
+    bottom: 100px;
+    font-size: 20px;
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: sobre-paragrafo infinite 60s linear;
+}
+
+/*ANIMAÇOES PARA A SESSAO SOBRE*/
+@keyframes sobre-info {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes sobre-paragrafo {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/*CLASSE PARA A SESSAO DE EDUCAÇAO*/
+.educacao {
+    display: flex;
+    width: 100%;
+    position: relative;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+
+}
+
+/*CLASSE PARA AS PROPRIEDADES DOS CURSOS*/
+.cursos {
+    position: relative;
+    height: 30%;
+    width: 30%;
+    left: 3%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.794);
+}
+
+.lista-curso {
+    padding: 4px 0px;
+    list-style: none;
+    color: white;
+
+}
+
+/*CLASSES PARA AS HABILIDADES*/
+.habilidades {
+    width: 30%;
+    height: 30%;
+}
+
+.lista-de-habilidades {
+    padding: 4px 0px;
+    list-style: none;
+    color: white;
+
+}
+
+/*PROPERIEDADES PARA AS BARRAS DE PROGRESSOS*/
+.barra-html {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(255, 128, 0);
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.progress-bar-html {
+    width: 70%;
+    height: 20px;
+    background-color: rgb(248, 163, 6);
+    border-radius: 10px;
+}
+
+.barra-css {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(0, 145, 255);
+    border-radius: 10px;
+}
+
+.progress-bar-css {
+    width: 60%;
+    height: 20px;
+    background-color: rgba(0, 72, 255, 0.873);
+    border-radius: 10px;
+}
+
+.barra-javascript {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(248, 248, 8);
+    border-radius: 10px;
+}
+
+.progress-bar-javascript {
+    width: 40%;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/*CLASSE DAS PROPRIEDADES PARA AS HABILIDADES ESPECIAIS*/
+.habilidades-especiais {
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left: 3%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.794);
+}
+
+.lista-de-habilidades-especiais {
+    list-style: none;
+    color: white;
+}
+
+/*CLASSES PARA OS ELEMENTOS DA SESSAO DE CONTATO*/
+.contato {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+}
+
+.conteudo-contato {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.imagens-contato {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-link {
+    padding: 50px;
+}
+
+/*CLASSES PARA O FORMULARIO*/
+.formulario-contato {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    left: 3%;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+}
+
+.btn-enviar {
+    width: 7%;
+    height: 3%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 2px;
+}
+.imagem-2{
+    position: absolute;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    left: 58%;
+    bottom: 0px;
+    opacity: 0.8;
+}
+.parag-formulario{
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    position: relative;
+    left: 6%;
+    bottom:50px;
+}
