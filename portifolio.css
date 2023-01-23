@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family= Anton & family = Roboto:wght@100 & display=swap');
 
 body {
+    width: auto;
+    height: auto;
     margin: 0;
     padding: 0;
     outline: none;
@@ -17,20 +19,12 @@ body {
     background: linear-gradient(rgba(37, 37, 37, 0.5),
             rgba(0, 60, 255, 0.627));
 }
-
-.logo {
-    width: 90px;
-    height: 90px;
-    margin: 10px 5%;
-    animation: logo-1 infinite 20s linear;
-}
-
 .nav-items {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     margin: 0px 5%;
     padding: 20px;
 }
@@ -286,7 +280,7 @@ body {
     justify-content: center;
 }
 
-.sobre-info {
+#sobre-info {
     position: relative;
     left: 1%;
     bottom: 100px;
@@ -450,7 +444,7 @@ body {
 }
 
 /*CLASSES PARA OS ELEMENTOS DA SESSAO DE CONTATO*/
-.contato {
+#contato {
     width: 100%;
     height: 100%;
     position: relative;
@@ -491,10 +485,11 @@ body {
     left: 3%;
     font-size: 20px;
     font-family: 'Anton', sans-serif;
+    display:block;
 }
 
 .btn-enviar {
-    width: 7%;
+    width:auto;
     height: 3%;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -502,13 +497,14 @@ body {
     border-radius: 2px;
 }
 .imagem-2{
-    position: absolute;
     display: flex;
-    width: 500px;
-    height: 500px;
-    left: 58%;
-    bottom: 0px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    right: 9%;
+    top: 120px;
     opacity: 0.8;
+  
 }
 .parag-formulario{
     color: white;
@@ -517,4 +513,11 @@ body {
     position: relative;
     left: 6%;
     bottom:50px;
+    width: 100%;
+}
+.items-formulario{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
