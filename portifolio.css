@@ -48,7 +48,7 @@ body {
 /* ACIMA O DESIGNER DO  CABEÇALHO*/
 /*Designer sessao*/
 .conteudo {
-    width: 100%;
+    width:auto;
     height: 100vh;
     display: flex;
     animation: fundo infinite 10s linear;
@@ -229,10 +229,11 @@ body {
 
 /*CLASSES PARA AS INFORMAÇÕES SOBRE QUEM SOU*/
 .subtitulo-portifolio {
+    width: auto;
     position: relative;
-    bottom: 100px;
+    bottom: 15%;
     font-size: 20px;
-    right: 100px;
+    right:6%;
     animation: sub-titulo-movimentacao infinite 60s linear;
 }
 
